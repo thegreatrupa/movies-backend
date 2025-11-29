@@ -24,11 +24,4 @@ public class UserController {
                 .map(UserMapper::toResponse)
                 .toList();
     }
-
-    @PostMapping
-    public UserResponse createUser(@RequestBody UserRequest request){
-        return UserMapper.toResponse(
-                service.createUser(request)
-        );
-    }
 }

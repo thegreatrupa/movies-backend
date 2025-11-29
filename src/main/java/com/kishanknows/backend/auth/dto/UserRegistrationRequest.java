@@ -1,9 +1,9 @@
-package com.kishanknows.backend.user.model;
+package com.kishanknows.backend.auth.dto;
 
-public record User(
-        Long id,
+public record UserRegistrationRequest(
         String name,
         String email,
         String username,
         String password
-){}
+) {
+}
