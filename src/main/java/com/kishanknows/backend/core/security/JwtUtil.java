@@ -13,12 +13,16 @@ public class JwtUtil {
 
     public static String generateToken(Long userId, String name, String email){
         return Jwts.builder()
-                .setSubject(String.valueOf(userId))
+                .claim("id", userId)
                 .claim("name", name)
                 .claim("email", email)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION))
                 .signWith(key)
                 .compact();
+    }
+
+    public static Key getKey(){
+        return key;
     }
 }
