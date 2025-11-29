@@ -23,10 +23,4 @@ public class UserService {
                 .map(UserMapper::toDomain)
                 .toList();
     }
-
-    public User createUser(UserRequest request){
-        UserEntity entity = UserMapper.toEntity(request);
-        UserEntity saved = repo.save(entity);
-        return UserMapper.toDomain(saved);
-    }
 }

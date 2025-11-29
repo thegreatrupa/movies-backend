@@ -4,15 +4,17 @@ import com.kishanknows.backend.user.dto.*;
 import com.kishanknows.backend.user.model.*;
 
 public class UserMapper {
-    public static UserEntity toEntity(UserRequest request){
-        return new UserEntity(null, request.name(), request.email());
+    public static UserEntity toEntity(User user){
+        return new UserEntity(null, user.name(), user.email(), user.username(), user.password());
     }
 
     public static User toDomain(UserEntity entity){
         return new User(
                 entity.getId(),
                 entity.getName(),
-                entity.getEmail()
+                entity.getEmail(),
+                entity.getUsername(),
+                entity.getPassword()
         );
     }
 
