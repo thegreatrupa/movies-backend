@@ -32,3 +32,11 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Spring Boot
+/target/
+/*.log
+
+# sensitive properties
+/src/main/resources/application.properties
+

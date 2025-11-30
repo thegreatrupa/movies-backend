@@ -3,8 +3,8 @@ spring:
     name: backend
   datasource:
     url: jdbc:postgresql://localhost:5432/moviedb
-    username: kishan
-    password: password
+    username: admin
+    password: admin123
   jpa:
     hibernate:
       ddl-auto: update
